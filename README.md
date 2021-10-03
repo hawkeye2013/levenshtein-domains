@@ -20,3 +20,7 @@ Run `node .` while in the root folder to run the project.
 ## Overview
 
 This repo has an example already set up. Given a list of trusted domains, the provided function `getRiskyDomains` will use the [Levenshtein Distance](https://en.wikipedia.org/wiki/Levenshtein_distance) to get the closest domain. If that domain is over the threshold (second argument), it will be returned as a risky domain.
+
+## Highlights
+
+This example set up highlights the use of similar characters with different character codes (punycode). The input domain looks like `google.com` but uses a character that is not actually an `o`. This verification catches that, thus the Levenshtein Distance is 1.
